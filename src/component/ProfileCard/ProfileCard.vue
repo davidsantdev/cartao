@@ -140,7 +140,7 @@ const props = withDefaults(defineProps<Props>(), {
   enableTilt: true,
   name: 'Issam Abou Fard',
   title: 'Fundador & CEO',
-  slogan: 'Alô Pará, você no coração da gente',
+  slogan: '',
   handle: 'Alô Pará',
   status: 'Disponível para contato',
   contactText: 'Fale com o nossos colaboradores',
