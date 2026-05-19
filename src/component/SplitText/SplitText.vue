@@ -80,7 +80,7 @@ const runAnimation = () => {
 
   const startPct = (1 - props.threshold) * 100;
   const marginMatch = /^(-?\d+(?:\.\d+)?)(px|em|rem|%)?$/.exec(props.rootMargin);
-  const marginValue = marginMatch ? parseFloat(marginMatch[1]) : 0;
+  const marginValue = marginMatch?.[1] ? parseFloat(marginMatch[1]) : 0;
   const marginUnit = marginMatch?.[2] || 'px';
 
   const sign =

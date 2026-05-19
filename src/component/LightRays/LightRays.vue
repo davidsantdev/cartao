@@ -95,7 +95,13 @@ const devicePixelRatio = computed<number>(() => Math.min(window.devicePixelRatio
 
 const hexToRgb = (hex: string): [number, number, number] => {
   const m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  return m ? [parseInt(m[1], 16) / 255, parseInt(m[2], 16) / 255, parseInt(m[3], 16) / 255] : [1, 1, 1];
+ return m
+  ? [
+      parseInt(m[1] ?? '0', 16) / 255,
+      parseInt(m[2] ?? '0', 16) / 255,
+      parseInt(m[3] ?? '0', 16) / 255
+    ]
+  : [1, 1, 1];
 };
 
 const getAnchorAndDir = (origin: RaysOrigin, w: number, h: number): AnchorAndDirection => {
@@ -402,7 +408,9 @@ onMounted((): void => {
   observerRef.value = new IntersectionObserver(
     (entries: IntersectionObserverEntry[]): void => {
       const entry = entries[0];
-      isVisible.value = entry.isIntersecting;
+      if (entry) {
+  isVisible.value = entry.isIntersecting;
+}
     },
     {
       threshold: 0.1,

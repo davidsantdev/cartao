@@ -255,9 +255,10 @@ function hexToVec3(hex: string): Vector3 {
   let b = 255;
 
   if (value.length === 3) {
-    r = parseInt(value[0] + value[0], 16);
-    g = parseInt(value[1] + value[1], 16);
-    b = parseInt(value[2] + value[2], 16);
+    
+ r = parseInt(value[0]! + value[0]!, 16);
+g = parseInt(value[1]! + value[1]!, 16);
+b = parseInt(value[2]! + value[2]!, 16);
   } else if (value.length === 6) {
     r = parseInt(value.slice(0, 2), 16);
     g = parseInt(value.slice(2, 4), 16);
@@ -373,7 +374,7 @@ const setup = () => {
 
     stops.forEach((hex, i) => {
       const color = hexToVec3(hex);
-      uniforms.lineGradient.value[i].set(color.x, color.y, color.z);
+      uniforms.lineGradient!.value![i]!.set(color!.x, color!.y, color!.z);
     });
   }
 
