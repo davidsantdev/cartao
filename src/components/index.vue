@@ -10,6 +10,7 @@ import Bgfloat from './bgfloat.vue';
 
 
  import ProfileCard from "../component/ProfileCard/ProfileCard.vue";
+import Dialog from './dialog.vue';
 
   const handleContactClick = () => {
     console.log('Contact button clicked!');
@@ -17,8 +18,8 @@ import Bgfloat from './bgfloat.vue';
 </script>
 
 <template>
-  <div class="flex justify-center ">
-    <Bgfloat class="flex  items-center justify-center ">
+  <div class=" ">
+    <Bgfloat class="flex flex-col items-center justify-center ">
 
       <SplitText
     text=""
@@ -37,7 +38,7 @@ import Bgfloat from './bgfloat.vue';
 
       
 
-      <div class="flex justify-center items-center ">
+      <div class="flex flex-col justify-center items-center ">
       
 
 
@@ -45,6 +46,20 @@ import Bgfloat from './bgfloat.vue';
 
    
   ></ProfileCard>
+
+ <div class="p-4">
+  .
+
+ </div>
+     <Dialog class="p-10" />
+
+      <div class="p-4">
+  .
+
+ </div>
+ 
+  
+ 
 
 
                 
