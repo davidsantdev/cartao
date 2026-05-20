@@ -47,13 +47,13 @@ import Dialog from './dialog.vue';
    
   ></ProfileCard>
 
- <div class="p-4">
+ <div class="p-">
   .
 
  </div>
-     <Dialog class="p-10" />
+     <Dialog class="p-2" />
 
-      <div class="p-4">
+      <div class="p-1">
   .
 
  </div>
